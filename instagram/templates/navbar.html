@@ -17,18 +17,7 @@
 
             <div class="collapse navbar-collapse" id="navbarToggle">
 
-                <div class="navbar-right">
-                    <ul class="navbar-nav mr-auto" style="list-style: none">
-                        {% if user.is_authenticated %}
-                        <a href="/logout" class="navbar-brand">
-                            Sign out</a>
-                        {% else %}
-                        <li>
-                            <a class='btn btn-default' href="/accounts/login">Login</a>
-                        </li>
-                        {% endif %}
-                    </ul>
-                </div>
+           
 
                 <div class="col-sm-4 col-md-4 navbar-right">
                     <form class="navbar-form" role="search" action="{% url 'search' %}">
