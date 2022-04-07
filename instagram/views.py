@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect
 from django.forms.widgets import DateTimeInput
 from django.http.response import HttpResponse, HttpResponseRedirect
-from insta.models import Comment, Image, Profile
-from insta.forms import CommentForm, NewPostForm, SignUpForm, UpdateProfileForm, UpdateUserForm
+from instagram.models import Comment, Image, Profile
+from instagram.forms import CommentForm, NewPostForm, SignUpForm, UpdateProfileForm, UpdateUserForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.conf import settings

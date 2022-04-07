@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('comments', models.CharField(blank=True, max_length=100)),
                 ('image', cloudinary.models.CloudinaryField(max_length=255, verbose_name='images')),
                 ('likes', models.ManyToManyField(blank=True, related_name='likes', to=settings.AUTH_USER_MODEL)),
-                ('profile', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='insta.profile')),
+                ('profile', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='instagram.profile')),
             ],
         ),
         migrations.CreateModel(
@@ -42,8 +42,8 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('comment', models.TextField()),
                 ('date', models.DateTimeField(auto_now_add=True, null=True)),
-                ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='insta.image')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='insta.profile')),
+                ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='instagram.image')),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='instagram.profile')),
             ],
         ),
     ]

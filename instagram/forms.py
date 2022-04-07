@@ -1,5 +1,5 @@
 from django import forms
-from insta.models import Comment, Image, Profile
+from instagram.models import Comment, Image, Profile
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
