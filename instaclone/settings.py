@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'instaclone.wsgi.application'
 
 
 # development
-MODE="dev"
+MODE="prod"
 if MODE=="dev":
    DATABASES = {
        'default': {
