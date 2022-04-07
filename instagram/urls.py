@@ -16,5 +16,5 @@ urlpatterns=[
     path('accounts/profile/',views.show_profile, name='profile'),
     path('accounts/', include('django_registration.backends.one_step.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('logout/', views.signout,name='logout'),
+    # path('logout/', views.signout,name='logout'),
 ]
