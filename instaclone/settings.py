@@ -29,17 +29,10 @@ cloudinary.config(
 # BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-zbn%^ja62o!$sk932@8#=%s#2uzehdg2_m63l00$b83t*dhf0b'
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
-
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-# DEBUG = config('DEBUG', default=False, cast=bool)
 
 # ALLOWED_HOSTS = []
 
@@ -54,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap3',
-    'insta.apps.InstaConfig',
+    'insta',
     'cloudinary',
 
 ]
@@ -98,7 +91,7 @@ WSGI_APPLICATION = 'instaclone.wsgi.application'
 
 
 # development
-MODE="prod"
+MODE="dev"
 if MODE=="dev":
    DATABASES = {
        'default': {
