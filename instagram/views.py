@@ -23,9 +23,9 @@ def signup(request):
             return HttpResponse('Thank you for registering with us')
     else:
         form = SignUpForm()
-    return render(request, 'registration_form.html', {'form': form})
+    return render(request, 'django_registration/registration_form.html', {'form': form})
 
-@login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')   
 def homepage(request):
     """
     View function to display homepage content
@@ -36,7 +36,7 @@ def homepage(request):
 
     return render(request, 'all-templates/home.html',{"posts":posts,"profile":profile,"comment":comment})
 
-@login_required(login_url='/accounts/login/')    
+@login_required(login_url='/accounts/login/')     
 def show_profile(request):
     current_user= request.user
     images= Image.objects.filter(profile=current_user.id).all
@@ -108,6 +108,6 @@ def comment(request,id):
         form = CommentForm()
 
     return render(request,'all-templates/comment.html',{"form":form,"images":images,"comments":post_comment})
-def signout(request):
-    logout(request)
-    return redirect(signup)
+# def signout(request):
+#     logout(request)
+#     return redirect(home)
