@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap3',
     'cloudinary',
-    'insta'
+    'instagram'
 
 ]
 
